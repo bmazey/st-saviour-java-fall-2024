@@ -1,7 +1,6 @@
 package interview;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class PasswordTest {
@@ -9,7 +8,7 @@ public class PasswordTest {
     @Test
     public void testPasswordLength() {
         // Ensure that generated password is of length 10.
-        assertEquals(10, Password.generatePassword().length());
+        assert Password.generatePassword().length() == 10;
     }
 
     @Test
@@ -17,20 +16,20 @@ public class PasswordTest {
         String password = Password.generatePassword();
 
         // Check password characters.
-        assertEquals(true, Character.isLetter(password.charAt(0)));
-        assertEquals(true, Character.isLetter(password.charAt(1)));
-        assertEquals(true, Character.isLetter(password.charAt(2)));
-        assertEquals(true, Character.isLetter(password.charAt(3)));
-        assertEquals(true, Character.isLetter(password.charAt(4)));
+        assert Character.isLetter(password.charAt(0));
+        assert Character.isLetter(password.charAt(1));
+        assert Character.isLetter(password.charAt(2));
+        assert Character.isLetter(password.charAt(3));
+        assert Character.isLetter(password.charAt(4));
 
         // Check password digits.
-        assertEquals(true, Character.isDigit(password.charAt(5)));
-        assertEquals(true, Character.isDigit(password.charAt(6)));
-        assertEquals(true, Character.isDigit(password.charAt(7)));
-        assertEquals(true, Character.isDigit(password.charAt(8)));
+        assert Character.isDigit(password.charAt(5));
+        assert Character.isDigit(password.charAt(6));
+        assert Character.isDigit(password.charAt(7));
+        assert Character.isDigit(password.charAt(8));
 
         // Check password symbols.
-        assertEquals(false, Character.isLetterOrDigit(password.charAt(9)));
+        assert !Character.isLetterOrDigit(password.charAt(9));
     }
 
     @Test
