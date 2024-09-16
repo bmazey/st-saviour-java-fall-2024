@@ -6,9 +6,5 @@ public class Hello {
 
     //   double d = 2.9;
     //   System.out.println((int)d);
-
-    int x = 5
-    int y = 2
-    System.out.println(x/y)
     }
 }
