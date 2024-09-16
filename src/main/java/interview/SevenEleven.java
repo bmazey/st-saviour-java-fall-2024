@@ -9,8 +9,15 @@ public class SevenEleven {
      *     - "" if x is not a multiple of seven or eleven
      */
     public static String shop(int x) {
-        // TODO implement shop().
+        String result = "";
 
-        return "";
+        } if (x % 7 == 0) {
+            result += "seven";
+        } else if (x % 11 == 0) {
+            result += "eleven";
+        }
+
+        return result;
     }
-}
+    
+
