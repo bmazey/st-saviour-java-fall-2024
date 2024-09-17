@@ -8,16 +8,16 @@ public class SevenEleven {
      *     - "seveneleven" if x is a multiple of seven and eleven
      *     - "" if x is not a multiple of seven or eleven
      */
-    public static String shop(int x) {
-        String result = "";
-
-        } if (x % 7 == 0) {
-            result += "seven";
-        } else if (x % 11 == 0) {
-            result += "eleven";
-        }
-
-        return result;
-    }
     
-
+    public static String shop(int x) {
+        if (x % 7 == 0 && x % 11 == 0) {
+            return "seveneleven";
+        } else if (x % 7 == 0) {
+            return "seven";
+        } else if (x % 11 == 0) {
+            return "eleven";
+        } else {
+            return "";
+        }
+    }
+}
