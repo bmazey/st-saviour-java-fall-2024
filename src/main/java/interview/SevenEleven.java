@@ -11,6 +11,17 @@ public class SevenEleven {
     public static String shop(int x) {
         // TODO implement shop().
 
-        return "";
+        String result = "";
+
+        if (x % 7 == 0){
+            result += "seven";
+        }
+        if (x % 11 == 0){
+            result += "eleven";
+        }
+
+        return result;
+        
+        
     }
 }

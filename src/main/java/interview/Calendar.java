@@ -8,8 +8,34 @@ public class Calendar {
      */
     public static String getHoliday(String month) {
         // TODO implement getHoliday().
+        if (month.equals("January")) {
+            return "New Year's Day";
+        }
+
+        if (month.equals("January")) {
+            return "Valentine's Day";
+        }
+
+        if (month.equals("March")) {
+            return "St. Patricks Day";
+        }
+
+        if (month.equals("April")) {
+            return "April Fool's Day";
+        }
+
+        if (month.equals("May")) {
+            return "Memorial Day";
+        }
+
+        if (month.equals("June")) {
+            return "Juneteenth";
+        }
+
+        if (month.equals("May")) {
+            return "Memorial Day";
+        }
         
         return "";
     }
-    
 }
