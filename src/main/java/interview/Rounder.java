@@ -11,8 +11,13 @@ public class Rounder {
     public static int round(double d) {
         // TODO implement round().
 
-
-        return 0;
+        if (d % 1 >= 0.5) {
+            return (int)d + 1;
+        }
+        if (d % 1 <= 0.5) {
+            return (int)d - 1;
+        }
+        return (int)d;
     }
     
 }
