@@ -9,9 +9,17 @@ public class Rounder {
      * ex: -3.6 => -4
      */
     public static int round(double d) {
-        // TODO implement round().
+        // TODO implement round() 
+        double remainder = d % 1;
+        if (remainder >= 0.5) {
+            return (int)d + 1;
+        
+        }
+        if (remainder <= -0.5) {
+            return (int)d - 1;
+        }
 
-        return 0;
+        return (int)d;
     }
     
 }
