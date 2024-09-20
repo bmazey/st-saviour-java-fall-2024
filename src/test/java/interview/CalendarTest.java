@@ -13,7 +13,7 @@ public class CalendarTest {
 
         // Should return the below holidays for each month.
         assertEquals("New Year's Day", Calendar.getHoliday("January"));
-m        assertEquals("Valentine's Day", Calendar.getHoliday("February"));
+        assertEquals("Valentine's Day", Calendar.getHoliday("February"));
         assertEquals("St. Patrick's Day", Calendar.getHoliday("March"));
         assertEquals("April Fool's Day", Calendar.getHoliday("April"));
         assertEquals("Memorial Day", Calendar.getHoliday("May"));

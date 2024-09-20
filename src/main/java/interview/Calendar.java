@@ -12,12 +12,12 @@ public class Calendar {
             return "New Year's Day";
         }
 
-        if (month.equals("January")) {
+        if (month.equals("February")) {
             return "Valentine's Day";
         }
 
         if (month.equals("March")) {
-            return "St. Patricks Day";
+            return "St. Patrick's Day";
         }
 
         if (month.equals("April")) {
@@ -32,10 +32,29 @@ public class Calendar {
             return "Juneteenth";
         }
 
-        if (month.equals("May")) {
-            return "Memorial Day";
+        if (month.equals("July")) {
+            return "Independence Day";
         }
         
+        if (month.equals("August")) {
+            return "International Youth Day";
+        }
+
+        if (month.equals("September")) {
+            return "Labor Day";
+        }
+
+        if (month.equals("October")) {
+            return "Halloween";
+        }
+
+        if (month.equals("November")) {
+            return "Thanksgiving";
+        }
+
+        if (month.equals("December")) {
+            return "Christmas";
+        }
         return "";
     }
 }
