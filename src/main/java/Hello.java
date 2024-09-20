@@ -8,3 +8,6 @@ public class Hello {
     //   System.out.println((int)d);
     }
 }
+
+    String h = "halloween";
+    

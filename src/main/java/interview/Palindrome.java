@@ -16,11 +16,9 @@ public class Palindrome {
             if (word.charAt(left) != word.charAt(right)) {
                 return false;
             }
-
             left++;
             right--;
-        
-        return true;
+        }
+        return true;   
     }
-    
 }
