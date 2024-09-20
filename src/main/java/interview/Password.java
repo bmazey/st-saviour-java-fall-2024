@@ -22,7 +22,8 @@ public class Password {
 
         int r = random.nextInt(alphabet.length());
         alphabet.charAt(r);
-        int y = random.nextInt()
+        int y = random.nextInt(symbols.length());
+        symbols.charAt(y);
         
         return "";
     }
