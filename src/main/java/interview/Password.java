@@ -1,4 +1,7 @@
 package interview;
+
+import java.util.Random;
+
 public class Password {
     
     /*
@@ -12,7 +15,7 @@ public class Password {
         // Random rand = new Random();
         // https://docs.oracle.com/en%2Fjava%2Fjavase%2F22%2Fdocs%2Fapi%2F%2F/java.base/java/util/random/RandomGenerator.html#nextInt(int)
 
-        // TODO implement generatePassword().
+        // TODO implement generatePassword()
         
         return "";
     }
