@@ -11,7 +11,7 @@ public class SevenEleven {
     public static String shop(int x) {
         // TODO implement shop().
 
-        // To
+        // 
         if(x % 7 == 0) {
         return "seven";
     }

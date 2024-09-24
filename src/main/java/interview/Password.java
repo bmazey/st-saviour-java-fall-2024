@@ -1,6 +1,6 @@
 package interview;
 public class Password {
-    
+import java.util.Random;
     /*
      * generatePassword() accepts no arguments and returns a string of length ten with the following characteristics:
      *  - The first five characters are letters.
@@ -13,7 +13,18 @@ public class Password {
         // https://docs.oracle.com/en%2Fjava%2Fjavase%2F22%2Fdocs%2Fapi%2F%2F/java.base/java/util/random/RandomGenerator.html#nextInt(int)
 
         // TODO implement generatePassword().
+        String alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+        Random random = new Random();
+
+        random.nextInt();
+
+        int r =random.nextInt(alphabet.length());
+
+        System.out.println("The random number is:" + r);
         
+        System.out.println("The random letter is:" + alphabet.charAt(r));
+
         return "";
     }
 }
