@@ -12,17 +12,14 @@ public class SevenEleven {
         // TODO implement shop().
 
         // 
-        if(x % 7 == 0) {
-        return "seven";
-    }
+        if((x % 7 == 0) && (x % 11 == 0)){
+            return "seveneleven";
+        }
         else if(x % 11 == 0) {
-        return "eleven";
+            return "eleven";
+        } else if (x % 7 == 0) {
+            return "seven";
+        } else
+            return "";
         }
-
-        else if(x % 7 == 0 && x % 11 == 0) {
-        return "seveneleven";
-
-        }
-        return "";
     }
-}

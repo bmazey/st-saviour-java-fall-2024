@@ -14,6 +14,8 @@ import java.util.Random;
 
         // TODO implement generatePassword().
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        String characters = "!@#$%^&*";
+        String numbers = "1234567890";
 
         Random random = new Random();
 
@@ -21,10 +23,8 @@ import java.util.Random;
 
         int r =random.nextInt(alphabet.length());
 
-        System.out.println("The random number is:" + r);
-        
-        System.out.println("The random letter is:" + alphabet.charAt(r));
-
+        System.out.println("Your passward is:" + r);
+    
         return "";
     }
 }
