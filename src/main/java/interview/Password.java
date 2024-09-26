@@ -23,7 +23,7 @@ import java.util.Random;
 
         int r =random.nextInt(alphabet.length());
 
-        System.out.println("Your passward is:" + r);
+        System.out.println("Your passward is:" + );
     
         return "";
     }
