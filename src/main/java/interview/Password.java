@@ -16,15 +16,25 @@ public class Password {
 
         // TODO implement generatePassword().
         Random random = new Random();
-
+        
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
         String symbols = "?!@#$%^&*()[]{}|;:<>";
+        String digits = "1234567890";
+        String password = "";
 
-        int r = random.nextInt(alphabet.length());
-        alphabet.charAt(r);
-        int y = random.nextInt(symbols.length());
-        symbols.charAt(y);
+        password += alphabet.charAt(random.nextInt(alphabet.length()));
+        password += alphabet.charAt(random.nextInt(alphabet.length()));
+        password += alphabet.charAt(random.nextInt(alphabet.length()));
+        password += alphabet.charAt(random.nextInt(alphabet.length()));
+        password += alphabet.charAt(random.nextInt(alphabet.length()));
+
+        password += digits.charAt(random.nextInt(digits.length()));
+        password += digits.charAt(random.nextInt(digits.length()));
+        password += digits.charAt(random.nextInt(digits.length()));
+        password += digits.charAt(random.nextInt(digits.length()));
+
+        password += symbols.charAt(random.nextInt(symbols.length()));
         
-        return "";
+        return password;
     }
 }

@@ -9,5 +9,5 @@ public class Hello {
     }
 }
 
-    String h = "halloween";
+    //String h = "halloween";
     
