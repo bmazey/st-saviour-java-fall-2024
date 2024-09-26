@@ -27,12 +27,15 @@ public class Password {
         password += alphabet.charAt(random.nextInt(alphabet.length()));
         password += alphabet.charAt(random.nextInt(alphabet.length()));
         password += alphabet.charAt(random.nextInt(alphabet.length()));
+        
         password += numbers.charAt(random.nextInt(numbers.length()));
-        int s = random.nextInt(symbol.length());
-
-        alphabet.charAt(a);
+        password += numbers.charAt(random.nextInt(numbers.length()));
+        password += numbers.charAt(random.nextInt(numbers.length()));
+        password += numbers.charAt(random.nextInt(numbers.length()));
+        
+        password += symbol.charAt(random.nextInt(symbol.length()));
         
         
-        return "";
+        return password;
     }
 }
