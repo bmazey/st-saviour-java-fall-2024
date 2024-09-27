@@ -1,4 +1,7 @@
 package interview;
+
+import java.util.Random;
+
 public class Password {
     
     /*
@@ -13,7 +16,29 @@ public class Password {
         // https://docs.oracle.com/en%2Fjava%2Fjavase%2F22%2Fdocs%2Fapi%2F%2F/java.base/java/util/random/RandomGenerator.html#nextInt(int)
 
         // TODO implement generatePassword().
+        String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        String number = "123456789";
+        String symbol = "!@#$%^&*";
+        String password = "";
+
+        Random random = new Random();
+
+        password += alphabet.charAt(random.nextInt(alphabet.length()));
+        password += alphabet.charAt(random.nextInt(alphabet.length()));
+        password += alphabet.charAt(random.nextInt(alphabet.length()));
+        password += alphabet.charAt(random.nextInt(alphabet.length()));
+        password += alphabet.charAt(random.nextInt(alphabet.length()));
         
+        password += number.charAt(random.nextInt(number.length()));
+        password += number.charAt(random.nextInt(number.length()));
+        password += number.charAt(random.nextInt(number.length()));
+        password += number.charAt(random.nextInt(number.length()));
+
+        password += symbol.charAt(random.nextInt(symbol.length()));
+
+        
+
+
         return "";
     }
 }
