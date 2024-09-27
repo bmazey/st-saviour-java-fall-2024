@@ -8,8 +8,49 @@ public class Calendar {
      */
     public static String getHoliday(String month) {
         // TODO implement getHoliday().
+
+        // Creates a condition of the month "January"
+        if (month == "January") {
+            // Returns a holiday within that month if the condition "January" is met 
+            return "New Year's Day";
+        }
+        if (month == "February") {
+            return "Valentine's Day";
+        }
+        if (month == "March") {
+            return "St. Patrick's Day";
+        }
+        if (month == "April") {
+            return "April Fool's Day";
+        }
+        if (month == "May") {
+            return "Memorial Day";
+        }
+        if (month == "June") {
+            return "Juneteenth";
+        }
+        if (month == "July") {
+            return "Independence Day";
+        }
+        if (month == "August") {
+            return "International Youth Day";
+        }
+        if (month == "September") {
+            return "Labor Day";
+        }
+        if (month == "October") {
+            return "Halloween";
+        }
+        if (month == "November") {
+            return "Thanksgiving";
+        }
+        if (month == "December") {
+            return "Christmas";
+        }
+        else {
+            return "";
+        }
         
-        return "";
     }
     
 }

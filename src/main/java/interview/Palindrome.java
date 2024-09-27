@@ -8,8 +8,23 @@ public class Palindrome {
      */
     public static boolean isPalindrome(String word) {
         // TODO implement isPalindrome().
+
+        // Sets left as position 0, or the starting position of the string
+        int left = 0;
+        // Sets right as the final position of the string
+        int right = word.length() - 1;
         
-        return true;
+        // While the starting position is less than the ending position
+        while (left < right) {
+            // Finds the character at the starting and ending position of the string
+            // If the character at the beginning and end are not equal return boolean false
+            if (word.charAt(left) != word.charAt(right)) {
+                return false;
+            }
+            // Moves the value before or after the positon
+            left++;
+            right--;
+        }
+        return true;   
     }
-    
 }

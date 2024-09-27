@@ -10,7 +10,20 @@ public class SevenEleven {
      */
     public static String shop(int x) {
         // TODO implement shop().
+        
+    // Sets the condition if the int x modulo 7 and 11 is 0 return "seveneleven"
+    if ((x % 7 == 0) && (x % 11== 0)) {
+        return "seveneleven";
+    }
 
-        return "";
+    // Sets the condition if the int x modulo 7 is 0 return "seven"
+    else if (x % 7 == 0) {
+        return "seven";
+
+    // Sets the condition if the int x modulo 11 is 0 return "eleven"
+    } else if (x % 11 == 0) {
+        return "eleven";
+    } else 
+        return ""; 
     }
 }
