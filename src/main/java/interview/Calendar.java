@@ -9,7 +9,9 @@ public class Calendar {
     public static String getHoliday(String month) {
         // TODO implement getHoliday().
 
+        // Creates a condition of the month "January"
         if (month == "January") {
+            // Returns a holiday within that month if the condition "January" is met 
             return "New Year's Day";
         }
         if (month == "February") {

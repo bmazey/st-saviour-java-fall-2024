@@ -10,9 +10,13 @@ public class Rounder {
      */
     public static int round(double d) {
         // TODO implement round().
+
+        // Sets the condition if d modulo 1 is greater than or equal to 0.5, round up
         if (d % 1 >= 0.5) {
             return (int)d + 1;
         }
+
+        // Sets the condition if d modulo 1 is less than or equal to -0.5, round down
         if (d % 1 <= -0.5) {
             return (int)d - 1;
         }
