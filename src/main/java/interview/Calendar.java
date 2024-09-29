@@ -8,8 +8,62 @@ public class Calendar {
      */
     public static String getHoliday(String month) {
         // TODO implement getHoliday().
+        // stating what month we are looking at
+        // if the month is *insert month* then return the holiday thats in that month
+        if (month.equals("January")) {
+        // so if the month is January we return "New Year's Day"
+        // which is the holiday the tests want us to return for that month
+            return "New Year's Day";
+        }
+
+        // repeat this for the rest of the months
+
+        if (month.equals("February")) {
+            return "Valentine's Day";
+        }
+
+        if (month.equals("March")) {
+            return "St. Patrick's Day";
+        }
+
+        if (month.equals("April")) {
+            return "April Fool's Day";
+        }
+
+        if (month.equals("May")) {
+            return "Memorial Day";
+        }
+
+        if (month.equals("June")) {
+            return "Juneteenth";
+        }
+
+        if (month.equals("July")) {
+            return "Independence Day";
+        }
         
+        if (month.equals("August")) {
+            return "International Youth Day";
+        }
+
+        if (month.equals("September")) {
+            return "Labor Day";
+        }
+
+        if (month.equals("October")) {
+            return "Halloween";
+        }
+
+        if (month.equals("November")) {
+            return "Thanksgiving";
+        }
+
+        if (month.equals("December")) {
+            return "Christmas";
+        }
+        // if someone enters a month that doesn't exist
+        // or if the month is spelled wrong
+        // return an empty string
         return "";
     }
-    
 }

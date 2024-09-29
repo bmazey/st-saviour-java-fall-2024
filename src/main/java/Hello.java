@@ -3,5 +3,9 @@ public class Hello {
 
         // first Java program!
         System.out.println("new dawn, new day");
-    }
+
+        // string.out h = "Halloween";
+
+    } 
 }
+
