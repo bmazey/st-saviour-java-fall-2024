@@ -8,10 +8,19 @@ public class Rounder {
      * Negative numbers should also be rounded up, but the result should remain negative.
      * ex: -3.6 => -4
      */
-    public static int round(double d) {
+    public static int round(double d){
         // TODO implement round().
+        
+        if (d % 1 >= 0.5){
+            return (int)d + 1;
 
-        return 0;
+        }
+        if(d % 1 <= -0.5){
+            return (int)d - 1;
+    
+        }
+        return(int)d;
     }
     
-}
+    }
+
