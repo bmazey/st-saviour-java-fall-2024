@@ -36,9 +36,6 @@ public class Password {
 
         password += symbol.charAt(random.nextInt(symbol.length()));
 
-        
-
-
-        return "";
+        return password;
     }
 }
