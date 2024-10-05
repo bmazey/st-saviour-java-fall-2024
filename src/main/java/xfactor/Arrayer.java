@@ -1,5 +1,7 @@
 package xfactor;
 
+import java.util.Arrays;
+
 public class Arrayer {
 
     // summation() accepts an array of integers and returns the sum of all numbers within.
@@ -27,10 +29,11 @@ public class Arrayer {
     }
 
     // merge() accepts two *pre-sorted* arrays of integers and returns a new *sorted* array.
-    // You may safely assume that the provided arrays are always of equal length.
-    // ex: [0, 2, 4, 8] + [1, 3, 5, 7] -> [0, 1, 2, 3, 4, 5, 7, 8]
+    // WARNING do not assume arrays are of equal length!
+    // ex: [0, 2, 4, 8] + [1, 3, 5] -> [0, 1, 2, 3, 4, 5, 8]
     public static int[] merge(int[] first, int[] second) {
         // TODO implement
+        // HINT: use Arrays.sort()
         return new int[0];
     }
 
