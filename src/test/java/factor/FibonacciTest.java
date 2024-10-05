@@ -1,4 +1,4 @@
-package xfactor;
+package factor;
 
 import org.junit.jupiter.api.Test;
 

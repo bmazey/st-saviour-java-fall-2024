@@ -1,4 +1,4 @@
-package xfactor;
+package factor;
 
 import java.util.Arrays;
 
