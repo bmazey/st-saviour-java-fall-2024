@@ -2,7 +2,7 @@ package xfactor;
 
 import org.junit.jupiter.api.Test;
 
-public class XFactorTest {
+public class ArrayerTest {
 
     @Test
     public void testSummation() {
@@ -35,7 +35,7 @@ public class XFactorTest {
     }
 
     @Test
-    public void testThreeOfFourDigits() {
+    public void testLastOfFourDigits() {
         
     }
 }

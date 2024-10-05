@@ -2,12 +2,15 @@ package xfactor;
 
 public class Combinator {
 
+    // TODO document
     public static int factorial(int n) {
+        // FIXME for +10 bonus!
         return 0;
     }
 
-    // Binomial coefficient
+    // TODO document
     public static int choose(int n, int k) {
+        // FIXME for +10 bonus!
         return 0;
     }
     
