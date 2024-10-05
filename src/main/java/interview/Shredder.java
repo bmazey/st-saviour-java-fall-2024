@@ -4,13 +4,15 @@ public class Shredder {
     
     public static String shredFirstCharacter(String word) {
         // TODO implement, use substring()
-
-        return "";
+        String sfc = word.substring(1);
+        return sfc;
     }
 
     public static String shredLastCharacter(String word) {
         // TODO implement, use substring()
 
-        return "";
+       String slc = word.substring(0,word.length() - 1);
+        
+       return slc;
     }
 }
