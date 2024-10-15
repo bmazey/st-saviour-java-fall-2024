@@ -1,13 +1,10 @@
 public class Hello {
     public static void main(String[] args) {
 
-        // first Java program!
-    //    System.out.println("new dawn, new day");
+        String f = "Fein";
 
-    //   double d = 2.9;
-    //   System.out.println((int)d);
+        for(int i = 0; i < 100; i++){
+            System.out.println(f);
+        }
     }
 }
-
-    //String h = "halloween";
-    
