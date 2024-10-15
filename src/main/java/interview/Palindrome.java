@@ -18,9 +18,11 @@ public class Palindrome {
         while (left < right){
         // Tells if the character at the end is different than the one at the start
         if(word.charAt(right) != word.charAt(left)){
+        // If they are not equal it will return false
             return false;
 
         }
+        // moves the value to either the left or right position
         left++;
         right--;
         }
