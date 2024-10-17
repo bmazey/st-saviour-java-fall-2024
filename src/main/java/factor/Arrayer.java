@@ -8,7 +8,11 @@ public class Arrayer {
     // ex: [0, 2, -1, 15] -> 16
     public static int summation(int[] numbers) {
         // TODO implement
-        return 0;
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i ++){
+            sum += numbers[i];
+        }
+        return sum;
     }
 
     // findNegative() accepts an array of integers containing one negative number
@@ -17,7 +21,14 @@ public class Arrayer {
     // ex: [11, 13, -1, 0, 9] -> 2
     public static int findNegative(int[] numbers) {
         // TODO implement
-        return 0;
+        int i = 0;
+        do{
+            if(numbers[i] < 0){
+                return i;
+            }
+            i ++;
+        }while(i < numbers.length);
+        return -1;
     }
 
     // remove() accepts an array of integers and an int n. The method removes *all instances*
@@ -49,6 +60,12 @@ public class Arrayer {
     // only the even numbers found in the provided array, in their original order.
     // ex: [3, 4, 7, 8, 12] -> [4, 8, 12]
     public static int[] evensOnly(int[] numbers) {
+        for(int i = 0; i <= 100; i ++){
+            if(i % 2 <= 0){
+                System.out.println(i);
+            }
+
+        }
         // TODO implement
         return new int[0];
     }
