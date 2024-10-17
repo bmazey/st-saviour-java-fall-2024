@@ -7,18 +7,29 @@ public class Arrayer {
     // summation() accepts an array of integers and returns the sum of all numbers within.
     // ex: [0, 2, -1, 15] -> 16
     public static int summation(int[] numbers) {
-        // TODO implement
-        return 0;
+        int sum = 0;
+        for (int num : numbers) {
+            sum += num;
+        }
+        return sum;
     }
+
 
     // findNegative() accepts an array of integers containing one negative number
     // and returns the *position* of the negative number. You may safely assume
     // the provided array contains only a single negative number.
     // ex: [11, 13, -1, 0, 9] -> 2
     public static int findNegative(int[] numbers) {
-        // TODO implement
-        return 0;
+        int i = 0;
+        do {
+            if (numbers[i]<0) {
+                return i;
+            }
+            i ++;
+        } while (i < numbers.length);
+        return -1;
     }
+
 
     // remove() accepts an array of integers and an int n. The method removes *all instances*
     // of n from the provided array and returns a new array with no instances of n.
