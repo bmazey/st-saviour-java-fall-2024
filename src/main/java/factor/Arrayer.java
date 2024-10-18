@@ -35,8 +35,24 @@ public class Arrayer {
     // of n from the provided array and returns a new array with no instances of n.
     // ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
     public static int[] remove(int[] numbers, int n) {
-        // TODO implement
-        return new int[0];
+        int count = 0
+        for(int i = 0; i < numbers.length; i++){
+            if(numbers[i] != 1){
+                count++;
+            }
+        }
+        int[] result = new int[count];
+        int position = 0;
+        for(int i = 0; i < numbers.length; i++){
+            if(numbers[i] != 1){
+                result[position] = numbers[i];
+                position++;
+            }
+        }
+        for(int i = 0; i < result.length; i++){
+            System.out.println(result[i] + " ");
+        }
+        
     }
 
     // merge() accepts two *pre-sorted* arrays of integers and returns a new *sorted* array.
@@ -60,9 +76,11 @@ public class Arrayer {
     // only the even numbers found in the provided array, in their original order.
     // ex: [3, 4, 7, 8, 12] -> [4, 8, 12]
     public static int[] evensOnly(int[] numbers) {
-        for(int i = 0; i <= 100; i ++){
-            if(i % 2 <= 0){
-                System.out.println(i);
+        int numbers = 0;
+        for(int i = 1; i <= 10; i ++){
+            if(i % 2 == 0){
+                numbers++;
+                System.out.println(numbers);
             }
 
         }
