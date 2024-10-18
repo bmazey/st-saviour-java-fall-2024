@@ -35,19 +35,20 @@ public class Arrayer {
     // of n from the provided array and returns a new array with no instances of n.
     // ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
     public static int[] remove(int[] numbers, int n) {
-        int count =0;
+        int count = 0;
         for (int i = 0; i<numbers.length; i++){
             if (numbers[i] != n){
-                count ++;
+                count++;
             }
         }
-        int [] result = new int[count];
+        int[] result = new int[count];
         int position = 0;
         for(int i=0; i<numbers.length;i++){
-            if (numbers[i] != n)
+            if (numbers[i] != n) {
                 result[position] = numbers[i];
                 position++;
             }
+        }
         return result;
     }
 
