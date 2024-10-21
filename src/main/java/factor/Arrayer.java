@@ -8,7 +8,11 @@ public class Arrayer {
     // ex: [0, 2, -1, 15] -> 16
     public static int summation(int[] numbers) {
         // TODO implement
-        return 0;
+        int sum = 0; 
+        for (int i = 0; i < numbers.length; i++){
+            sum += numbers[i];
+        }
+            return sum;
     }
 
     // findNegative() accepts an array of integers containing one negative number
@@ -17,7 +21,14 @@ public class Arrayer {
     // ex: [11, 13, -1, 0, 9] -> 2
     public static int findNegative(int[] numbers) {
         // TODO implement
-        return 0;
+        int i = 0;
+        do{
+            if (numbers[i] < 0){
+            return i;
+            }
+            i++; 
+        } while (i < numbers.length);
+        return -1;
     }
 
     // remove() accepts an array of integers and an int n. The method removes *all instances*
@@ -25,8 +36,26 @@ public class Arrayer {
     // ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
     public static int[] remove(int[] numbers, int n) {
         // TODO implement
+        int count = 0;
+        int[] result = new int[count];
+        for (int i = 0; i < numbers.length; i++){
+            if(numbers[i] != n){
+                count++;
+            }
+        }
+        for (int i = 0; i < numbers.length; i++){
+            if(numbers[i] != n){
+                result[count] = numbers[i];
+                count++;
+            }
+        }
+        for (int i =0; i < result.length; i++){
+            // return result[i];
+        }
+
         return new int[0];
     }
+    
 
     // merge() accepts two *pre-sorted* arrays of integers and returns a new *sorted* array.
     // WARNING do not assume arrays are of equal length!
@@ -34,6 +63,14 @@ public class Arrayer {
     public static int[] merge(int[] first, int[] second) {
         // TODO implement
         // HINT: use Arrays.sort()
+
+        int sorted = 0;
+        for(int i = 0; i < first.length; i++){
+            Arrays.sort(first);
+        }
+        for(int i = 0; i < second.length; i++){
+            Arrays.sort(second);
+        }
         return new int[0];
     }
 

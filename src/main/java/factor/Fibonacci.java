@@ -9,6 +9,9 @@ public class Fibonacci {
     // ex: n = 6 -> 8
     public static int sequence(int n) {
         // TODO implement
-        return 0;
+        if (n <= 1){
+            return n;
+        }
+        return sequence(n - 1) + sequence(n - 2);
     }
 }
