@@ -37,22 +37,10 @@ public class Arrayer {
     public static int[] remove(int[] numbers, int n) {
         // TODO implement
         int count = 0;
-        int[] result = new int[count];
         for (int i = 0; i < numbers.length; i++){
-            if(numbers[i] != n){
-                count++;
-            }
+            if (numbers[i] != n);
+            numbers[count++] = numbers[i];
         }
-        for (int i = 0; i < numbers.length; i++){
-            if(numbers[i] != n){
-                result[count] = numbers[i];
-                count++;
-            }
-        }
-        for (int i =0; i < result.length; i++){
-            // return result[i];
-        }
-
         return new int[0];
     }
     
