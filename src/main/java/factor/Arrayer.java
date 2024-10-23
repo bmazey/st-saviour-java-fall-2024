@@ -38,28 +38,38 @@ public class Arrayer {
         // TODO implement
         int count = 0;
         for (int i = 0; i < numbers.length; i++){
-            if (numbers[i] != n);
-            numbers[count++] = numbers[i];
+            if (numbers[i] != n){
+                count++;
+            }
         }
-        return new int[0];
+        int [] result = new int[count];
+        int position = 0;
+        for (int i = 0; i < numbers.length; i++){
+            if (numbers[i] != n){
+                result[position] = numbers[i];
+                position++;
+            }
+        }
+        return result;
     }
-    
-
     // merge() accepts two *pre-sorted* arrays of integers and returns a new *sorted* array.
     // WARNING do not assume arrays are of equal length!
     // ex: [0, 2, 4, 8] + [1, 3, 5] -> [0, 1, 2, 3, 4, 5, 8]
     public static int[] merge(int[] first, int[] second) {
         // TODO implement
         // HINT: use Arrays.sort()
-
-        int sorted = 0;
-        for(int i = 0; i < first.length; i++){
-            Arrays.sort(first);
+        int [] result = new int[first.length + second.length];
+        int count = 0;
+        for (int f = 0; f < first.length; f++){
+            result[f] = first[f];
+            count++;
         }
-        for(int i = 0; i < second.length; i++){
-            Arrays.sort(second);
+        for (int s = 0; s < second.length; s++){
+            result[count++] = second[s];
+            
         }
-        return new int[0];
+        Arrays.sort(result);
+        return result;
     }
 
     // roundUp() accepts an array of *non-negative* doubles and returns an array of
@@ -67,6 +77,8 @@ public class Arrayer {
     // ex: [1.2, 3.5, 4.2, 0.0] -> [1, 4, 4, 0]
     public static int[] roundUp(double[] doubles) {
         // TODO implement
+        double []result = new double[doubles.length];
+        
         return new int[0];
     }
 
