@@ -14,8 +14,20 @@ public class Combinator {
 
     // TODO document
     public static int choose(int n, int k) {
-        // FIXME for +10 bonus!
-        return 0;
+        int productn = 1;
+        for(int i = n; i >= 1; i--){
+            productn = productn*i;
+        }
+
+        int productk = 1;
+        for(int i = k; i >= 1; i--){
+            productk = productk*i;
+        }
+
+        int denominator = productn - productk;
+        int result = productn / ( productk * denominator ); 
+
+        return result;
     }
     
 }
