@@ -77,7 +77,14 @@ public class Arrayer {
     // ex: [1.2, 3.5, 4.2, 0.0] -> [1, 4, 4, 0]
     public static int[] roundUp(double[] doubles) {
         // TODO implement
-        double []result = new double[doubles.length];
+        int []rounded = new int[doubles.length];
+        int count = 0;
+        for (int d = 0; d < doubles.length; d++){
+            if (doubles[d] % 1 >= 0.5) {
+               // rounded[d] = doubles[d] + 1; 
+            }
+        }
+
         
         return new int[0];
     }
