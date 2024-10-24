@@ -37,14 +37,14 @@ public class Arrayer {
     public static int[] remove(int[] numbers, int n) {
         int count = 0;
         for(int i = 0; i < numbers.length; i++){
-            if(numbers[i] != 1){
+            if(numbers[i] != n){
                 count++;
             }
         }
         int[] result = new int[count];
         int position = 0;
         for(int i = 0; i < numbers.length; i++){
-            if(numbers[i] != 1){
+            if(numbers[i] != n){
                 result[position] = numbers[i];
                 position++;
             }
@@ -68,7 +68,7 @@ public class Arrayer {
     // rounded integers. Doubles are rounded up when the decimal is >= 0.5.
     // ex: [1.2, 3.5, 4.2, 0.0] -> [1, 4, 4, 0]
     public static int[] roundUp(double[] doubles) {
-        // TODO implement
+
         return new int[0];
     }
 
@@ -76,16 +76,21 @@ public class Arrayer {
     // only the even numbers found in the provided array, in their original order.
     // ex: [3, 4, 7, 8, 12] -> [4, 8, 12]
     public static int[] evensOnly(int[] numbers) {
-        int numbers = 0;
-        for(int i = 1; i <= 10; i ++){
-            if(i % 2 == 0){
-                numbers++;
+        int count = 0;
+        for(int i = 0; i < numbers.length; i ++){
+            if(numbers[i] % 2 == 0){
                 System.out.println(numbers);
             }
-
         }
-        // TODO implement
-        return new int[0];
+        int[] result = new int[count];
+            int position = 0;
+            for(int i = 0; i <= numbers.length; i++){
+                if(numbers[i] % 2 == 0){
+                    result[position] = numbers[i];
+                    position++;
+                }
+            }
+            return result;
     }
 
     // lastOfFourDigits() accepts an array of four-digit integers and returns a new
