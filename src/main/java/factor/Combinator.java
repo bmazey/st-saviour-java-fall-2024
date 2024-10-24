@@ -16,7 +16,7 @@ public class Combinator {
     public static int choose(int n, int k) {
         // FIXME for +10 bonus!
         
-        return 0;
+        return factorial(n) / (factorial(k) * factorial(n - k));
     }
     
 }
