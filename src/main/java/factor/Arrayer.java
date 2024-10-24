@@ -8,7 +8,11 @@ public class Arrayer {
     // ex: [0, 2, -1, 15] -> 16
     public static int summation(int[] numbers) {
         // TODO implement
-        return 0;
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++){
+            sum += numbers[i];
+        }
+        return sum;
     }
 
     // findNegative() accepts an array of integers containing one negative number
@@ -17,7 +21,14 @@ public class Arrayer {
     // ex: [11, 13, -1, 0, 9] -> 2
     public static int findNegative(int[] numbers) {
         // TODO implement
-        return 0;
+        int i = 0;
+        do{
+            if(numbers[i] < 0){
+                return i;
+            }
+            i ++;
+        } while (i < numbers.length);
+        return -1;
     }
 
     // remove() accepts an array of integers and an int n. The method removes *all instances*
@@ -25,7 +36,25 @@ public class Arrayer {
     // ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
     public static int[] remove(int[] numbers, int n) {
         // TODO implement
-        return new int[0];
+        int count = 0;
+        
+        for (int i = 0; i < numbers.length; i++){
+            if (numbers[i] != n){
+                count++;
+            }
+        }
+
+        int[] result = new int[count];
+        int position = 0;
+        for( int i = 0; i < numbers.length; i++){
+            if (numbers[i] != n){
+                result[position] = numbers[i];
+                position++;
+            }
+        }
+        
+    
+        return result;
     }
 
     // merge() accepts two *pre-sorted* arrays of integers and returns a new *sorted* array.
@@ -34,7 +63,22 @@ public class Arrayer {
     public static int[] merge(int[] first, int[] second) {
         // TODO implement
         // HINT: use Arrays.sort()
-        return new int[0];
+        int[] result = new int[first.length + second.length];
+
+        int position = 0;
+        for(int i = 0; i < first.length; i++){
+            result[position] = first[i];
+            position++;
+        }
+
+        for(int i = 0; i < second.length; i++) {
+            result[position] = second[i];
+            position++;
+        }
+
+        Arrays.sort(result);
+
+        return result;
     }
 
     // roundUp() accepts an array of *non-negative* doubles and returns an array of
@@ -42,7 +86,16 @@ public class Arrayer {
     // ex: [1.2, 3.5, 4.2, 0.0] -> [1, 4, 4, 0]
     public static int[] roundUp(double[] doubles) {
         // TODO implement
-        return new int[0];
+        int[] result = new int[doubles.length];
+        for(int i = 0; i < doubles.length; i ++) {
+            if (doubles[i] % 1 >= .5){
+                result[i] = (int)doubles[i] + 1;
+            } else {
+                result[i] = (int)doubles[i];
+            }
+        }
+        
+        return result;
     }
 
     // evensOnly() accepts an array of integers and returns a new array containing
@@ -50,7 +103,24 @@ public class Arrayer {
     // ex: [3, 4, 7, 8, 12] -> [4, 8, 12]
     public static int[] evensOnly(int[] numbers) {
         // TODO implement
-        return new int[0];
+        int count = 0;
+        
+        for (int i = 0; i < numbers.length; i++){
+            if (numbers[i] % 2 == 0){
+                count++;
+            }
+        }        
+        
+        int position = 0;
+        int[] result = new int[count];
+        for(int i = 0; i < numbers.length; i++){
+            if(numbers[i] % 2 == 0){
+                result[position] = numbers[i];
+                position++;
+            }
+        }
+       
+        return result;
     }
 
     // lastOfFourDigits() accepts an array of four-digit integers and returns a new
@@ -58,6 +128,12 @@ public class Arrayer {
     // ex: [1004, 1112, 5667, 8009] -> [4, 2, 7, 9]
     public static int[] lastOfFourDigits(int[] numbers) {
         // TODO implement
-        return new int[0];
+        int[] result = new int[numbers.length];
+        for(int i = 0; i < numbers.length; i++){
+            result[i] = numbers[i] % 10;
+        }
+
+
+        return result;
     }
 }
