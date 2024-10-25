@@ -78,8 +78,15 @@ public class Arrayer {
     // rounded integers. Doubles are rounded up when the decimal is >= 0.5.
     // ex: [1.2, 3.5, 4.2, 0.0] -> [1, 4, 4, 0]
     public static int[] roundUp(double[] doubles) {
+        int[] round = new int[doubles.length];
+        for(int i = 0; i < doubles.length; i++){
+            if(doubles[i] % 1 <= 0.5){
+            round[i] = (int)doubles[i] + 1;
+            } else
+            round[i] = (int)doubles[i];
+        }
+        return round;
 
-        return new int[0];
     }
 
     // evensOnly() accepts an array of integers and returns a new array containing
