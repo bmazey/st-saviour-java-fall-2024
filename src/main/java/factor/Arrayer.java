@@ -61,11 +61,14 @@ public class Arrayer {
     public static int[] merge(int[] first, int[] second) {
         // TODO implement
         // HINT: use Arrays.sort()
-        int[] result = new int[first.length + second.length]
+        int[] result = new int[first.length + second.length];
         int count = 0;
-        for(int f = 0; f < first.length; f++){
-            result[f] = first[f];
+        for(int i = 0; i < first.length; i++){
+            result[i] = first[i];
             count++;
+        }
+        for(int i = 0; i < second.length; i++){
+            result[count++] = second[i];
         }
         Arrays.sort(result);
         return result;
