@@ -2,7 +2,7 @@ package factor;
 
 public class Combinator {
 
-    // TODO document
+    // Use a for loop and ensures that the product is equal to product times the integer i
     public static int factorial(int n) {
         int product = 1;
         for(int i = n; i >= 1; i--){

@@ -61,7 +61,14 @@ public class Arrayer {
     public static int[] merge(int[] first, int[] second) {
         // TODO implement
         // HINT: use Arrays.sort()
-        return new int[0];
+        int[] result = new int[first.length + second.length]
+        int count = 0;
+        for(int f = 0; f < first.length; f++){
+            result[f] = first[f];
+            count++;
+        }
+        Arrays.sort(result);
+        return result;
     }
 
     // roundUp() accepts an array of *non-negative* doubles and returns an array of
@@ -80,11 +87,12 @@ public class Arrayer {
         for(int i = 0; i < numbers.length; i ++){
             if(numbers[i] % 2 == 0){
                 System.out.println(numbers);
+                count++;
             }
         }
         int[] result = new int[count];
             int position = 0;
-            for(int i = 0; i <= numbers.length; i++){
+            for(int i = 0; i < numbers.length; i++){
                 if(numbers[i] % 2 == 0){
                     result[position] = numbers[i];
                     position++;
