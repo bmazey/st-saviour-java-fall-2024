@@ -80,13 +80,13 @@ public class Arrayer {
     public static int[] roundUp(double[] doubles) {
         int[] round = new int[doubles.length];
         for(int i = 0; i < doubles.length; i++){
-            if(doubles[i] % 1 <= 0.5){
-            round[i] = (int)doubles[i] + 1;
-            } else
-            round[i] = (int)doubles[i];
+            if(doubles[i] % 1 >= 0.5){
+                round[i] = (int)doubles[i] + 1;
+            } else {
+                round[i] = (int)doubles[i];
+            }
         }
         return round;
-
     }
 
     // evensOnly() accepts an array of integers and returns a new array containing
