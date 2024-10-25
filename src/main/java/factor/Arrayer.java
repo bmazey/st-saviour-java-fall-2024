@@ -115,7 +115,9 @@ public class Arrayer {
     // array containing only the last digit of each number in the original sequence.
     // ex: [1004, 1112, 5667, 8009] -> [4, 2, 7, 9]
     public static int[] lastOfFourDigits(int[] numbers) {
-        // TODO implement
-        return new int[0];
+        for(int i = 0; i < numbers.length; i++){
+            numbers[i] = numbers[i] % 10;
+        }
+        return numbers;
     }
 }
