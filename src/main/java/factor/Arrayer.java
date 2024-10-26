@@ -8,6 +8,8 @@ public class Arrayer {
     // ex: [0, 2, -1, 15] -> 16
     public static int summation(int[] numbers) {
         // TODO implement
+
+        //loop goes through numbers array and adds them to the total sum of all numbers
         int sum = 0;
         for (int i = 0; i < numbers.length; i++){
             sum += numbers[i];
@@ -21,6 +23,8 @@ public class Arrayer {
     // ex: [11, 13, -1, 0, 9] -> 2
     public static int findNegative(int[] numbers) {
         // TODO implement
+     
+        // loop through numbers array until negative number is found and return its position
         int i = 0;
         do{
             if(numbers[i] < 0){
@@ -36,24 +40,25 @@ public class Arrayer {
     // ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
     public static int[] remove(int[] numbers, int n) {
         // TODO implement
-        int count = 0;
         
+        // loop counting numbers not equal to n for new array size
+        int count = 0;
         for (int i = 0; i < numbers.length; i++){
             if (numbers[i] != n){
                 count++;
             }
         }
 
+        // creates new array with all numbers not equal to n
         int[] result = new int[count];
         int position = 0;
-        for( int i = 0; i < numbers.length; i++){
+        for(int i = 0; i < numbers.length; i++){
             if (numbers[i] != n){
                 result[position] = numbers[i];
                 position++;
             }
         }
         
-    
         return result;
     }
 
@@ -63,8 +68,11 @@ public class Arrayer {
     public static int[] merge(int[] first, int[] second) {
         // TODO implement
         // HINT: use Arrays.sort()
+
+        // creates new result array sizing it to the sum of the first and second arrays' lengths
         int[] result = new int[first.length + second.length];
 
+        // loops through first and second arrays and copies all numbers
         int position = 0;
         for(int i = 0; i < first.length; i++){
             result[position] = first[i];
@@ -76,6 +84,7 @@ public class Arrayer {
             position++;
         }
 
+        // returns new array with numbers from first and second array sorted
         Arrays.sort(result);
 
         return result;
@@ -86,7 +95,11 @@ public class Arrayer {
     // ex: [1.2, 3.5, 4.2, 0.0] -> [1, 4, 4, 0]
     public static int[] roundUp(double[] doubles) {
         // TODO implement
+
+        // creates result array of integers sized the same as the given doubles array
         int[] result = new int[doubles.length];
+        
+        // loops through all ints of doubles array and rounds each
         for(int i = 0; i < doubles.length; i ++) {
             if (doubles[i] % 1 >= .5){
                 result[i] = (int)doubles[i] + 1;
@@ -103,6 +116,8 @@ public class Arrayer {
     // ex: [3, 4, 7, 8, 12] -> [4, 8, 12]
     public static int[] evensOnly(int[] numbers) {
         // TODO implement
+        
+        // loops through numbers array checking if ints are even to count size of new array
         int count = 0;
         
         for (int i = 0; i < numbers.length; i++){
@@ -110,9 +125,10 @@ public class Arrayer {
                 count++;
             }
         }        
-        
+         
         int position = 0;
         int[] result = new int[count];
+        // loops through nubers array to add even numbers to result array
         for(int i = 0; i < numbers.length; i++){
             if(numbers[i] % 2 == 0){
                 result[position] = numbers[i];
@@ -128,11 +144,14 @@ public class Arrayer {
     // ex: [1004, 1112, 5667, 8009] -> [4, 2, 7, 9]
     public static int[] lastOfFourDigits(int[] numbers) {
         // TODO implement
+        
+        // sizes result array the same as numbers array
         int[] result = new int[numbers.length];
+        
+        // loops through numbers array using % 10 to return last digit of each number
         for(int i = 0; i < numbers.length; i++){
             result[i] = numbers[i] % 10;
         }
-
 
         return result;
     }
