@@ -9,7 +9,9 @@ public class Arrayer {
     public static int summation(int[] numbers) {
         // TODO implement
         int sum = 0; 
+        // For loop going down each number in the array. 
         for (int i = 0; i < numbers.length; i++){
+            // Adding the int i into sum
             sum += numbers[i];
         }
             return sum;
@@ -23,13 +25,17 @@ public class Arrayer {
         // TODO implement
         int i = 0;
         do{
+            // Returns i if it is less than 0, or negative. 
             if (numbers[i] < 0){
             return i;
             }
             i++; 
+        // Terminating conditions. 
         } while (i < numbers.length);
         return -1;
     }
+
+
 
     // remove() accepts an array of integers and an int n. The method removes *all instances*
     // of n from the provided array and returns a new array with no instances of n.
@@ -42,7 +48,7 @@ public class Arrayer {
                 count++;
             }
         }
-        int [] result = new int[count];
+        int[] result = new int[count];
         int position = 0;
         for (int i = 0; i < numbers.length; i++){
             if (numbers[i] != n){
