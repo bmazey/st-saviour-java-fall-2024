@@ -7,9 +7,11 @@ public class Arrayer {
     // summation() accepts an array of integers and returns the sum of all numbers within.
     // ex: [0, 2, -1, 15] -> 16
     public static int summation(int[] numbers) {
-        int sum = 0;
-        for (int num : numbers) {
-            sum += num;
+        int sum = 0; // Initialize sum 
+        
+        // Create loop that adds the numbers in the array to sum.
+        for (int num : numbers){
+            sum += num; 
         }
         return sum;
     }
@@ -20,12 +22,15 @@ public class Arrayer {
     // the provided array contains only a single negative number.
     // ex: [11, 13, -1, 0, 9] -> 2
     public static int findNegative(int[] numbers) {
-        int i = 0;
+        int i = 0; // Make position holder start at position 0 of the array.
+        
+        // Create loop that returns the position in the array that contains 
+        // a number less than 0.
         do {
-            if (numbers[i]<0) {
+            if (numbers[i] < 0){
                 return i;
             }
-            i ++;
+            i++;
         } while (i < numbers.length);
         return -1;
     }
@@ -35,15 +40,19 @@ public class Arrayer {
     // of n from the provided array and returns a new array with no instances of n.
     // ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
     public static int[] remove(int[] numbers, int n) {
-        int count = 0;
-        for (int i = 0; i<numbers.length; i++){
+        int count = 0; // Variable that keeps count of the length of the new array
+        for (int i = 0; i < numbers.length; i++){
             if (numbers[i] != n){
                 count++;
             }
         }
-        int[] result = new int[count];
-        int position = 0;
-        for(int i=0; i<numbers.length;i++){
+        int[] result = new int[count]; // Create result array.
+        
+        // Make position holder start at position 0 of the result array
+        int position = 0; 
+        
+        // Make loop that attributes all non n numbers to result array.
+        for(int i = 0; i < numbers.length; i++){
             if (numbers[i] != n) {
                 result[position] = numbers[i];
                 position++;
@@ -56,16 +65,20 @@ public class Arrayer {
     // WARNING do not assume arrays are of equal length!
     // ex: [0, 2, 4, 8] + [1, 3, 5] -> [0, 1, 2, 3, 4, 5, 8]
     public static int[] merge(int[] first, int[] second) {
-        int[] result = new int[first.length + second.length];
-        int counter = 0;
-        for (int f=0; f<first.length; f++){
+        int[] result = new int[first.length + second.length]; // Create result array.
+        int counter = 0; // Keeps count of length of new array.
+        
+        // Loop that attributes numbers in first array to result array
+        for (int f = 0; f < first.length; f++){
             result[f] = first[f];
             counter++;
         }
-        for (int s =0; s<first.length; s++){
+        
+        // Loop that attributes numbers in second array to result.
+        for (int s = 0; s < first.length; s++){
             result[counter++] = second[s];
         }
-        Arrays.sort(result);
+        Arrays.sort(result); // Sort result array.
         return result;
     }
 
@@ -73,12 +86,13 @@ public class Arrayer {
     // rounded integers. Doubles are rounded up when the decimal is >= 0.5.
     // ex: [1.2, 3.5, 4.2, 0.0] -> [1, 4, 4, 0]
     public static int[] roundUp(double[] doubles) {
-        int[] roundedInts = new int[doubles.length];
-        int i = 0;
+        int[] roundedInts = new int[doubles.length]; // Create Result array.
+        int i = 0; // Set beginning of loop at position 0.
         do {
             int digit = (int) doubles[i];
             
-            if (doubles[i] % 1 >= 0.5) {
+            // Uses Modulo to determine if number should be rounded.
+            if (doubles[i] % 1 >= 0.5){
                 roundedInts[i] = digit + 1;
             } else {
                 roundedInts[i] = digit;
@@ -91,17 +105,19 @@ public class Arrayer {
     // evensOnly() accepts an array of integers and returns a new array containing
     // only the even numbers found in the provided array, in their original order.
     // ex: [3, 4, 7, 8, 12] -> [4, 8, 12]
-    public static int[] evensOnly(int[] numbers){
-        int count = 0;
-        for (int i = 0; i<numbers.length; i++){
+    public static int[] evensOnly(int[] numbers) {
+        int count = 0; // Keeps count of length of new array.
+        for (int i = 0; i < numbers.length; i++){
             if (numbers[i] % 2 == 0){
                 count++;
             }
         }
-        int[] result = new int[count];
+        int[] result = new int[count]; // Create result array.
         int position = 0;
+        
+        // Use modulo to determind if a number is even.
         for(int i = 0; i < numbers.length; i++){
-            if (numbers[i] % 2 == 0) {
+            if (numbers[i] % 2 == 0){
                 result[position] = numbers[i];
                 position++;
             }
@@ -109,11 +125,13 @@ public class Arrayer {
         return result;
     } 
 
-    // lastOfFourDigits() accepts an array of four-digit integers and returns a new
+    // lastOfFourDigits() accepts! an array of four-digit integers and returns a new
     // array containing only the last digit of each number in the original sequence.
     // ex: [1004, 1112, 5667, 8009] -> [4, 2, 7, 9]
     public static int[] lastOfFourDigits(int[] numbers) {
-        int i = 0;
+        int i = 0; // Set beginning of loop at position 0.
+
+        // modulo 10 to determine last digit
         for (i = 0; i < numbers.length; i++){
             numbers[i] = numbers[i] % 10;
         }
