@@ -125,7 +125,7 @@ public class Arrayer {
         return result;
     } 
 
-    // lastOfFourDigits() accepts! an array of four-digit integers and returns a new
+    // lastOfFourDigits() accepts an array of four-digit integers and returns a new
     // array containing only the last digit of each number in the original sequence.
     // ex: [1004, 1112, 5667, 8009] -> [4, 2, 7, 9]
     public static int[] lastOfFourDigits(int[] numbers) {
