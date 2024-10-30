@@ -7,6 +7,7 @@ public class Combinator {
         // FIXME for +10 bonus!
         int product = 1;
         for(int i = n; i >= 1; i--){
+            // Product is multiplied by the next descending number
             product = product * i;
         }
         return product;
@@ -16,6 +17,7 @@ public class Combinator {
     public static int choose(int n, int k) {
         // FIXME for +10 bonus!
         
+        // The choose formula 
         return factorial(n) / (factorial(k) * factorial(n - k));
     }
     

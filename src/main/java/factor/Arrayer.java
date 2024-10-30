@@ -44,6 +44,7 @@ public class Arrayer {
         // TODO implement
         int count = 0;
         for (int i = 0; i < numbers.length; i++){
+            // Moves forward in the array count if a number is not n
             if (numbers[i] != n){
                 count++;
             }
@@ -52,6 +53,7 @@ public class Arrayer {
         int position = 0;
         for (int i = 0; i < numbers.length; i++){
             if (numbers[i] != n){
+                // Moves forward in the new array if the result's position is the same as numbers
                 result[position] = numbers[i];
                 position++;
             }
@@ -64,16 +66,20 @@ public class Arrayer {
     public static int[] merge(int[] first, int[] second) {
         // TODO implement
         // HINT: use Arrays.sort()
+        // The array result is the size of the length of the first and second array
         int [] result = new int[first.length + second.length];
         int count = 0;
+        // Assures the size of result is the same as first
         for (int f = 0; f < first.length; f++){
             result[f] = first[f];
             count++;
         }
+        // Assures the size of result is the same as second
         for (int s = 0; s < second.length; s++){
             result[count++] = second[s];
             
         }
+        // Sorts the merged arrays
         Arrays.sort(result);
         return result;
     }
@@ -83,14 +89,18 @@ public class Arrayer {
     // ex: [1.2, 3.5, 4.2, 0.0] -> [1, 4, 4, 0]
     public static int[] roundUp(double[] doubles) {
         // TODO implement
+        // Makes a new array of integers with the same length as doubles
         int[] rounded = new int[doubles.length];
         for (int d = 0; d < doubles.length; d++){
+            // Rounds the double up
             if (doubles[d] % 1 >= 0.5) {
                 rounded[d] = (int)doubles[d] + 1;
+                // Rounds down
             } else {
                 rounded[d] = (int)doubles[d];
             }
         }
+        // Returns the rounded doubles 
         return rounded;
     }
 
@@ -100,6 +110,7 @@ public class Arrayer {
     public static int[] evensOnly(int[] numbers) {
         // TODO implement
         int count = 0; 
+        // Moves forward in the array if e is even
         for (int e = 0; e < numbers.length; e++){
             if (numbers[e] % 2 == 0){
                 count++;
@@ -108,6 +119,7 @@ public class Arrayer {
         int[] onlyevens = new int[count];
         int position = 0;
         for (int e = 0; e < numbers.length; e++){
+            // Moves forward in the array if the even number is in the same position as count
             if (numbers[e] % 2 == 0){
                 onlyevens[position] = numbers[e];
                 position++;
@@ -122,6 +134,7 @@ public class Arrayer {
     public static int[] lastOfFourDigits(int[] numbers) {
         // TODO implement
         for (int l = 0; l < numbers.length; l++){
+            // A number modulo 10 returns the last digit
             numbers[l] = numbers[l] % 10; 
         } 
         return numbers;
