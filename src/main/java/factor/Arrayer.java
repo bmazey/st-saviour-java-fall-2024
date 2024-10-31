@@ -35,8 +35,6 @@ public class Arrayer {
         return -1;
     }
 
-
-
     // remove() accepts an array of integers and an int n. The method removes *all instances*
     // of n from the provided array and returns a new array with no instances of n.
     // ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
