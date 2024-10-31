@@ -8,7 +8,12 @@ public class Fibonacci {
     // 0, 1, 1, 2, 3, 5, 8 ...
     // ex: n = 6 -> 8
     public static int sequence(int n) {
-        // TODO implement
-        return 0;
+    // ensures that n has to be less than or equal to 1    
+        if(n <= 1){
+            return n;
+        }
+    // If the number is greater than 1 it will subtract 1 and two 
+    //and add them together to make sure it is the sum of the two numbers before it
+        return sequence(n - 1) + sequence(n - 2);
     }
 }
