@@ -6,12 +6,14 @@ public class CombinatorTest {
 
     @Test
     public void testFactorial() {
-        // TODO implement for +10 bonus!
+        assert Combinator.factorial(5) == 120;
+        assert Combinator.factorial(9) == 362880;
     }
 
     @Test
     public void testChoose() {
-        // TODO iomplement for +10 bonus!
+        assert Combinator.choose(5, 3) == 10;
+        assert Combinator.choose(4, 2) == 6;
     }
     
 }
