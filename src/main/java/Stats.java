@@ -15,7 +15,22 @@ public class Stats {
      * Return true if a new ScoreInfo object was added and false otherwise.
      */
     public boolean record(int score) {
-        return true;
+
+        for(int i = 0; i < this.scoreList.size(); i++) {
+            if(this.scoreList.get(i).getScore() == score) {
+                this.scoreList.get(i).increment();
+                return false;
+            }
+        }
+
+        for(int i = 0; i < this.scoreList.size(); i++) {
+            if(this.scoreList.get(i).getScore() > score) {
+                ScoreInfo info = new ScoreInfo(score);
+                this.scoreList.add(i, info);
+                return true;
+            }
+        }
+        return false;
     }
 
     // Records all scores in stuScores in the database, preserving the order.
